@@ -11,7 +11,7 @@ class Encryption:
         return chr(97 + index)
 
     @staticmethod
-    def cipher(phrase: str, mode=1) -> str:
+    def caesar(phrase: str, mode=1) -> str:
         # mode: 1 cipher
         # mode: -1 decipher
         return "".join(Encryption.getChar((Encryption.getIndex(x) + key * mode) % 26) if x.isalpha() else x
@@ -31,9 +31,10 @@ if __name__ == "__main__":
     if(option == 0):
         key = int(input("Enter key: "))
         print("Original: " + plain)
-        print("Cipher: " + Encryption.cipher(plain))
-        print("Decipher: " + Encryption.cipher(plain, -1))
+        print("Cipher: " + Encryption.caesar(plain))
+        print("Decipher: " + Encryption.caesar(plain, -1))
     elif(option == 1):
         a = int(input("enter a: "))
         b = int(input("enter b: "))
+        print("Original: " + plain)
         print("Cipher: " + Encryption.affine(plain, a, b))
