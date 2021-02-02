@@ -20,11 +20,11 @@ class Encryption:
 
 if __name__ == "__main__":
 
-    plain = input("enter phrase to getIndex: ")
-    key = int(input("enter key: "))
-    print("cipher: " + Encryption.cipher(plain))
-
-    print("decipher: " + Encryption.cipher(plain, -1))
+    plain = input("Enter phrase to cipher: ")
+    key = int(input("Enter key: "))
+    print("Original: " + plain)
+    print("Cipher: " + Encryption.cipher(plain))
+    print("Decipher: " + Encryption.cipher(plain, -1))
 
 
 # getIndex = {"a": 0, "b": 1, "c": 2, "d": 3, "e": 4, "f": 5, "g": 6, "h": 7, "i": 8, "j": 9, "k": 10, "l": 11, "m": 12,
