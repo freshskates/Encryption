@@ -11,7 +11,7 @@ class Encryption:
         return chr(97 + index)
 
     @staticmethod
-    def cipher(phrase: str, mode) -> str:
+    def cipher(phrase: str, mode=1) -> str:
         # mode: 1 cipher
         # mode: -1 decipher
         return "".join(Encryption.getChar((Encryption.getIndex(x) + key * mode) % 26) if x.isalpha() else x
@@ -22,7 +22,7 @@ if __name__ == "__main__":
 
     plain = input("enter phrase to getIndex: ")
     key = int(input("enter key: "))
-    print("cipher: " + Encryption.cipher(plain, 1))
+    print("cipher: " + Encryption.cipher(plain))
 
     print("decipher: " + Encryption.cipher(plain, -1))
 
