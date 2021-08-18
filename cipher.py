@@ -23,8 +23,8 @@ class Encryption:
                        for x in phrase.lower())
 
 
-if __name__ == "__main__":
 
+def main():
     plain = input("Enter phrase to cipher: ")
     print("Press 0 for Caesar cipher \npress 1 for Affine Cipher \npress 2 for Brute Force \n")
     option = int(input("Your option : "))
@@ -38,3 +38,6 @@ if __name__ == "__main__":
         b = int(input("enter b: "))
         print("Original: " + plain)
         print("Cipher: " + Encryption.affine(plain, a, b))
+
+if __name__ == "__main__":
+    main()
